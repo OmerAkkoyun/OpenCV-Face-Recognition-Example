@@ -12,6 +12,7 @@ uname = input("Enter your name: ")
 c.execute('INSERT INTO users (name) VALUES (?)', (uname,))
 uid = c.lastrowid
 sampleNum = 0
+
 while True:
   ret, img = cap.read()
   gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
